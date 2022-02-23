@@ -10,7 +10,7 @@ function getRandomInteger (firstNumber, lastNumber) {
     return Math.floor(Math.random() * (actualLastNumber - actualFirstNumber + 1) + actualFirstNumber);
   }
 }
-console.log(getRandomInteger (1.5, 3));
+getRandomInteger (1.5, 3);
 
 // ссылка на источник https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
@@ -20,4 +20,4 @@ function checkStringLength (string, maxLength) {
   } return false;
 }
 
-console.log(checkStringLength('Привет, как дела?', 140));
+checkStringLength('Привет, как дела?', 140);
