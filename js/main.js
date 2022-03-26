@@ -69,4 +69,3 @@ function commentsList (_, counter) {
 const SIMILAR_DESCRIPTIONS_COUNT = 25;
 
 const SIMILAR_IMAGE_DESCRIPTIONS = Array.from({length: SIMILAR_DESCRIPTIONS_COUNT}, getImageDescription);
-console.log(SIMILAR_IMAGE_DESCRIPTIONS);
