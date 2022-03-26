@@ -17,6 +17,8 @@ function checkStringLength (string, maxLength) {
   return string.length <= maxLength;
 }
 
+checkStringLength('Привет, как дела', 120);
+
 const DESCRIPTIONS = [
   'Познакомьтесь с моим котом..)',
   'Раньше было лучше',
@@ -47,12 +49,12 @@ function getImageDescription (_, counter) {
   const currentID = counter + 1;
   return {
     id: currentID,
-    url: `photos/${currentID}.jpg`,
+    url: `photos/${currentID + 1}.jpg`,
     description: getRandomArrayElement(DESCRIPTIONS),
     likes: getRandomInteger (15, 200),
     comment: Array.from({length: getRandomInteger (1, 5)}, commentsList)
-  }
-};
+  };
+}
 
 function commentsList (_, counter) {
   const currentID = counter + 1;
@@ -67,3 +69,4 @@ function commentsList (_, counter) {
 const SIMILAR_DESCRIPTIONS_COUNT = 25;
 
 const SIMILAR_IMAGE_DESCRIPTIONS = Array.from({length: SIMILAR_DESCRIPTIONS_COUNT}, getImageDescription);
+console.log(SIMILAR_IMAGE_DESCRIPTIONS);
